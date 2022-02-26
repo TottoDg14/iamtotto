@@ -1,0 +1,25 @@
+nav {
+    margin: 5rem 12.5rem 0rem;
+    padding-top: 0;
+
+    > .navbar-nav > .nav-item {
+
+        > .nav-link {
+            color: #fff;
+            padding: 0 .625rem 0;
+            position: relative;
+
+            &.active::after {
+                background-color: $bg-red-80;
+                border-radius: 0.625rem;
+                bottom: 0;
+                content: "";
+                height: 0.625rem;
+                margin-left: calc(-50% + 0.313rem);
+                position: absolute;
+                top: 2.125rem;
+                width: 0.625rem;
+            }
+        }
+    }
+}

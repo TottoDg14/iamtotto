@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+body {
+  background-color: #454550;
+}
+
+.cl-red-80 {
+  color: #C1292E;
+}
+
+.ff-custom {
+  font-family: "Poppins";
+}
+
+nav {
+  margin: 5rem 12.5rem 0rem;
+  padding-top: 0;
+}
+nav > .navbar-nav > .nav-item > .nav-link {
+  color: #fff;
+  padding: 0 0.625rem 0;
+  position: relative;
+}
+nav > .navbar-nav > .nav-item > .nav-link.active::after {
+  background-color: #C1292E;
+  border-radius: 0.625rem;
+  bottom: 0;
+  content: "";
+  height: 0.625rem;
+  margin-left: calc(-50% + 0.313rem);
+  position: absolute;
+  top: 2.125rem;
+  width: 0.625rem;
+}
+
+footer {
+  background-color: #272735;
+  height: 6.25rem;
+  margin-top: 6.25rem;
+}
+
+section {
+  margin-top: 9.375rem;
+}
+section > div p, section > div .symbol {
+  color: #A7A7A7;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 500;
+}
+section > div .symbol {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+section > div .symbol::before {
+  background-color: #A7A7A7;
+  content: "";
+  display: inline-block;
+  height: 0.125rem;
+  margin-bottom: 0.35rem;
+  margin-right: 1.25rem;
+  width: 0.938rem;
+}
+section > div h2 {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+section > div h2.call-to-action {
+  color: #C1292E;
+  margin: 5.625rem 0 0;
+}
+section #header .name > h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+section #header .divider {
+  background-color: #C1292E;
+  border-radius: 25px;
+  height: 0.625rem;
+  margin-top: 3.75rem;
+  width: 6.25rem;
+}
+section #header .social-block {
+  height: 1.875rem;
+  margin: 3.125rem 0 0;
+  padding-left: 0;
+}
+section #header .social-block .block {
+  border: 1px solid #fff;
+  color: #fff;
+  height: 30px;
+  list-style: none;
+  margin: 0 1.563rem 0;
+  text-align: center;
+  width: 30px;
+}
+section #header .social-block .block:first-child {
+  margin-left: 0;
+}
+section #header .mark {
+  background-color: transparent;
+  color: #fff;
+  padding: 0;
+}
+section #header .mark h5 {
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: 1.625rem;
+  margin-bottom: 0;
+}
+section #contact {
+  background-color: #272735;
+  margin-top: 10rem;
+}
+section #contact .container {
+  padding-top: 6.25rem;
+}
+section #contact .container .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 5.625rem 0 0;
+}
+section #contact .container .data .data-block {
+  align-items: flex-end;
+  display: flex;
+  font-family: "Montserrat";
+}
+section #contact .container .data .data-block p {
+  color: #C1292E;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-bottom: 0;
+}
+section #contact .container .data .data-block h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  max-width: 6.25rem;
+}
+section #contact .container .projects {
+  bottom: -9.375rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12.5rem;
+  position: relative;
+}
+section #contact .container .projects .block {
+  align-items: flex-end;
+  background-color: #575762;
+  display: flex;
+  height: 300px;
+  justify-content: flex-end;
+  width: 300px;
+}
+section #contact .container .projects .block:first-child {
+  background-color: #C1292E;
+}
+section #contact .container .projects .block > .info {
+  margin-bottom: 2.5rem;
+  margin-right: 3.125rem;
+  width: 8.125rem;
+}
+section #contact .container .projects .block > .info h3, section #contact .container .projects .block > .info h6 {
+  color: #fff;
+  font-weight: 600;
+}
+section #portafolio {
+  margin-top: 15.625rem;
+}
+section #portafolio .project {
+  border-radius: 1.875rem;
+  height: 31.25rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease-in;
+  width: 25rem;
+}
+section #portafolio .project::after {
+  background: radial-gradient(97.25% 109.4% at 115.38% 121.7%, rgba(255, 255, 255, 0) 0%, rgba(39, 39, 53, 0.32) 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+  z-index: -1;
+}
+section #portafolio .project:hover {
+  background: transparent;
+}
+section #portafolio .project:hover::after {
+  opacity: 0;
+}
+section #portafolio .project:hover > .title h1, section #portafolio .project:hover > .title p {
+  color: #575762;
+}
+section #portafolio .project:last-child {
+  margin-top: 9.375rem;
+}
+section #portafolio .project > .title {
+  align-items: flex-end;
+  display: flex;
+  font-family: "Poppins";
+  padding: 3.125rem 3.125rem 0;
+}
+section #portafolio .project > .title h1, section #portafolio .project > .title p {
+  color: #fff;
+  margin-bottom: 0;
+  transition: all 0.5s ease-in;
+}
+section #portafolio .project > .title > h1 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  max-width: 10rem;
+}
+section #portafolio .project > .title > p {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+section #portafolio .project > img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=custom.css.map */
