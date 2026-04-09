@@ -1,27 +1,50 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
-const icons = [
-  // Code icon
-  <svg key="code" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
-  // Server icon
-  <svg key="server" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>,
-  // Smartphone icon
-  <svg key="smartphone" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>,
-  // Plug icon
-  <svg key="plug" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg>,
-  // Zap icon
-  <svg key="zap" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
-  // MessageSquare icon
-  <svg key="message" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-];
+const ServiceIcon = ({ type }) => {
+  const icons = {
+    code: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+    ),
+    server: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/>
+      </svg>
+    ),
+    smartphone: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>
+      </svg>
+    ),
+    cloud: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+      </svg>
+    ),
+    database: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>
+      </svg>
+    ),
+    settings: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>
+      </svg>
+    )
+  };
+  return icons[type] || icons.code;
+};
+
+const iconTypes = ['code', 'server', 'smartphone', 'cloud', 'database', 'settings'];
 
 const Services = () => {
   const { t } = useLanguage();
 
   return (
     <section id="services" className="services" data-testid="services-section">
-      <div className="container">
+      <div className="services-container">
         <motion.div 
           className="section-header"
           initial={{ opacity: 0, y: 20 }}
@@ -45,9 +68,9 @@ const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="service-icon">
-                {icons[index]}
+                <ServiceIcon type={iconTypes[index]} />
               </div>
-              <div className="service-number">0{index + 1}</div>
+              <span className="service-number">0{index + 1}</span>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
             </motion.div>
@@ -55,39 +78,44 @@ const Services = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         .services {
-          padding: 8rem 0;
-          background: var(--bg-surface);
+          padding: 6rem 0;
+          background: #18181B;
         }
 
-        .section-header {
-          margin-bottom: 4rem;
+        .services-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
         }
 
-        .section-label {
-          font-family: var(--font-mono);
+        .services .section-header {
+          margin-bottom: 3rem;
+        }
+
+        .services .section-label {
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
           text-transform: uppercase;
           letter-spacing: 0.2em;
-          color: var(--accent-primary);
+          color: #00E5FF;
           display: block;
           margin-bottom: 0.5rem;
         }
 
-        .section-title {
-          font-family: var(--font-heading);
+        .services .section-title {
+          font-family: 'Outfit', sans-serif;
           font-size: clamp(2rem, 5vw, 3rem);
           font-weight: 700;
-          color: var(--text-primary);
+          color: #FAFAFA;
+          margin: 0;
         }
 
         .services-grid {
           display: grid;
-          grid-template-columns: 1fr;
-          gap: 1px;
-          background: var(--border);
-          border: 1px solid var(--border);
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1.5rem;
         }
 
         @media (min-width: 640px) {
@@ -104,45 +132,34 @@ const Services = () => {
 
         .service-card {
           padding: 2rem;
-          background: var(--bg-primary);
+          background: #09090B;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
           position: relative;
           transition: all 0.3s ease;
         }
 
-        .service-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: var(--accent-primary);
-          transition: width 0.3s ease;
-        }
-
         .service-card:hover {
+          border-color: rgba(0, 229, 255, 0.5);
           background: rgba(0, 229, 255, 0.03);
-        }
-
-        .service-card:hover::before {
-          width: 100%;
+          transform: translateY(-4px);
         }
 
         .service-card:hover .service-icon {
-          color: var(--accent-primary);
-          transform: scale(1.1);
+          color: #00E5FF;
         }
 
         .service-icon {
-          color: var(--text-secondary);
+          color: #A1A1AA;
           margin-bottom: 1.5rem;
-          transition: all 0.3s ease;
+          transition: color 0.3s ease;
+          display: flex;
         }
 
         .service-number {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
-          color: var(--accent-primary);
+          color: #00E5FF;
           opacity: 0.5;
           position: absolute;
           top: 1.5rem;
@@ -150,17 +167,19 @@ const Services = () => {
         }
 
         .service-title {
-          font-family: var(--font-heading);
+          font-family: 'Outfit', sans-serif;
           font-size: 1.25rem;
           font-weight: 700;
-          color: var(--text-primary);
-          margin-bottom: 0.75rem;
+          color: #FAFAFA;
+          margin: 0 0 0.75rem 0;
         }
 
         .service-description {
+          font-family: 'IBM Plex Sans', sans-serif;
           font-size: 0.875rem;
-          color: var(--text-secondary);
+          color: #A1A1AA;
           line-height: 1.7;
+          margin: 0;
         }
       `}</style>
     </section>

@@ -34,12 +34,12 @@ const translations = {
         about: {
             title: 'Sobre m\xed',
             subtitle: '// quien_soy.md',
-            bio: 'Soy desarrollador de software con m\xe1s de 4 a\xf1os de experiencia. Me apasionan las nuevas tecnolog\xedas, trabajar de manera organizada, colaborar y asumir nuevos retos.',
-            learning: 'Actualmente aprendiendo',
+            bio: 'Soy desarrollador de software con m\xe1s de 8 a\xf1os de experiencia en diversos lenguajes, frameworks y entornos. He trabajado desplegando servicios completos en Kubernetes, desarrollando backend para APIs y paneles administrativos, y he publicado aplicaciones en Play Store y App Store.',
+            learning: 'Actualmente trabajando en',
             learningItems: [
                 'Arquitectura de apps m\xf3viles en Expo + React Native',
-                'Integraciones con APIs y despliegues en Google Play / App Store',
-                'Administraci\xf3n de entornos Ubuntu + Apache + HTTPS'
+                'Despliegues en Google Play / App Store',
+                'Servicios en Kubernetes y Docker'
             ],
             techStack: 'Tech Stack'
         },
@@ -53,23 +53,23 @@ const translations = {
                 },
                 {
                     title: 'Desarrollo Backend',
-                    description: 'APIs robustas y escalables con Node.js, Express, Java y bases de datos PostgreSQL/MySQL.'
+                    description: 'APIs robustas y escalables con Node.js, Express, Java, PHP/Symfony y bases de datos PostgreSQL/MySQL.'
                 },
                 {
                     title: 'Apps M\xf3viles',
-                    description: 'Desarrollo de aplicaciones m\xf3viles multiplataforma con React Native y Expo.'
+                    description: 'Desarrollo de aplicaciones m\xf3viles multiplataforma con React Native y Expo. Publicaci\xf3n en Play Store y App Store.'
+                },
+                {
+                    title: 'Cloud & DevOps',
+                    description: 'Despliegue de servicios en Kubernetes, Docker y configuraci\xf3n de entornos en la nube.'
+                },
+                {
+                    title: 'Bases de Datos',
+                    description: 'Dise\xf1o e implementaci\xf3n con PostgreSQL, MySQL, Prisma. Reportes con JasperSoft.'
                 },
                 {
                     title: 'Integraciones ERP',
                     description: 'Plugins y extensiones para iDempiere. Reportes Jasper, automatizaciones y middleware.'
-                },
-                {
-                    title: 'Automatizaci\xf3n',
-                    description: 'Flujos automatizados con N8N, integraciones WhatsApp y sistemas de gesti\xf3n.'
-                },
-                {
-                    title: 'Consultor\xeda',
-                    description: 'Asesoramiento t\xe9cnico para elegir las mejores tecnolog\xedas para tu proyecto.'
                 }
             ]
         },
@@ -98,7 +98,7 @@ const translations = {
                 },
                 {
                     title: 'Runner Light',
-                    description: 'App para corredores con sistema de recompensas y logros.',
+                    description: 'App para corredores con sistema de recompensas y logros. Publicada en stores.',
                     tags: [
                         'React Native',
                         'Expo',
@@ -155,12 +155,12 @@ const translations = {
         about: {
             title: 'About me',
             subtitle: '// who_am_i.md',
-            bio: "I'm a software developer with over 4 years of experience. I'm passionate about new technologies, working in an organized way, collaborating and taking on new challenges.",
-            learning: 'Currently learning',
+            bio: "I'm a software developer with over 8 years of experience in various languages, frameworks and environments. I've worked deploying complete services on Kubernetes, developing backend for APIs and admin panels, and have published applications on Play Store and App Store.",
+            learning: 'Currently working on',
             learningItems: [
                 'Mobile app architecture with Expo + React Native',
-                'API integrations and deployments on Google Play / App Store',
-                'Ubuntu + Apache + HTTPS environment administration'
+                'Deployments on Google Play / App Store',
+                'Services on Kubernetes and Docker'
             ],
             techStack: 'Tech Stack'
         },
@@ -174,23 +174,23 @@ const translations = {
                 },
                 {
                     title: 'Backend Development',
-                    description: 'Robust and scalable APIs with Node.js, Express, Java and PostgreSQL/MySQL databases.'
+                    description: 'Robust and scalable APIs with Node.js, Express, Java, PHP/Symfony and PostgreSQL/MySQL databases.'
                 },
                 {
                     title: 'Mobile Apps',
-                    description: 'Cross-platform mobile application development with React Native and Expo.'
+                    description: 'Cross-platform mobile application development with React Native and Expo. Published on Play Store and App Store.'
+                },
+                {
+                    title: 'Cloud & DevOps',
+                    description: 'Service deployment on Kubernetes, Docker and cloud environment configuration.'
+                },
+                {
+                    title: 'Databases',
+                    description: 'Design and implementation with PostgreSQL, MySQL, Prisma. Reports with JasperSoft.'
                 },
                 {
                     title: 'ERP Integrations',
                     description: 'Plugins and extensions for iDempiere. Jasper reports, automations and middleware.'
-                },
-                {
-                    title: 'Automation',
-                    description: 'Automated workflows with N8N, WhatsApp integrations and management systems.'
-                },
-                {
-                    title: 'Consulting',
-                    description: 'Technical advice to choose the best technologies for your project.'
                 }
             ]
         },
@@ -219,7 +219,7 @@ const translations = {
                 },
                 {
                     title: 'Runner Light',
-                    description: 'App for runners with rewards and achievements system.',
+                    description: 'App for runners with rewards and achievements system. Published on stores.',
                     tags: [
                         'React Native',
                         'Expo',

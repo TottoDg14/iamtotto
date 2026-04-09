@@ -4,8 +4,8 @@ import { useLanguage } from '../context/LanguageContext';
 const techStack = {
   backend: ['Java', 'Node.js', 'Express', 'PHP', 'Symfony', 'iDempiere'],
   frontend: ['React', 'Next.js', 'React Native', 'Expo'],
-  database: ['PostgreSQL', 'MySQL', 'SQL Server', 'Prisma'],
-  tools: ['N8N', 'JasperReports', 'WhatsApp API', 'Git']
+  database: ['PostgreSQL', 'MySQL', 'Prisma', 'JasperSoft'],
+  devops: ['Kubernetes', 'Docker', 'AWS', 'Git']
 };
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <section id="about" className="about" data-testid="about-section">
-      <div className="container">
+      <div className="about-container">
         <motion.div 
           className="section-header"
           initial={{ opacity: 0, y: 20 }}
@@ -86,31 +86,38 @@ const About = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         .about {
-          padding: 8rem 0;
-          background: var(--bg-primary);
+          padding: 6rem 0;
+          background: #09090B;
         }
 
-        .section-header {
-          margin-bottom: 4rem;
+        .about-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
         }
 
-        .section-label {
-          font-family: var(--font-mono);
+        .about .section-header {
+          margin-bottom: 3rem;
+        }
+
+        .about .section-label {
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
           text-transform: uppercase;
           letter-spacing: 0.2em;
-          color: var(--accent-primary);
+          color: #00E5FF;
           display: block;
           margin-bottom: 0.5rem;
         }
 
-        .section-title {
-          font-family: var(--font-heading);
+        .about .section-title {
+          font-family: 'Outfit', sans-serif;
           font-size: clamp(2rem, 5vw, 3rem);
           font-weight: 700;
-          color: var(--text-primary);
+          color: #FAFAFA;
+          margin: 0;
         }
 
         .about-grid {
@@ -127,8 +134,8 @@ const About = () => {
         }
 
         .terminal {
-          background: var(--bg-surface);
-          border: 1px solid var(--border);
+          background: #18181B;
+          border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 8px;
           overflow: hidden;
         }
@@ -139,7 +146,7 @@ const About = () => {
           gap: 0.5rem;
           padding: 0.75rem 1rem;
           background: rgba(255, 255, 255, 0.03);
-          border-bottom: 1px solid var(--border);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .terminal-dot {
@@ -153,44 +160,46 @@ const About = () => {
         .terminal-dot.green { background: #28c840; }
 
         .terminal-title {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
-          color: var(--text-secondary);
+          color: #A1A1AA;
           margin-left: auto;
         }
 
         .terminal-body {
           padding: 1.5rem;
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.875rem;
           line-height: 1.8;
         }
 
         .terminal-line {
-          color: var(--text-primary);
-          margin-bottom: 0.5rem;
+          color: #FAFAFA;
+          margin: 0 0 0.5rem 0;
         }
 
         .prompt {
-          color: var(--accent-primary);
+          color: #00E5FF;
           margin-right: 0.5rem;
         }
 
         .terminal-output {
-          color: var(--text-secondary);
-          margin-bottom: 1.5rem;
+          color: #A1A1AA;
+          margin: 0 0 1.5rem 0;
           padding-left: 1rem;
-          border-left: 2px solid var(--border);
+          border-left: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .terminal-label {
-          color: var(--accent-secondary);
-          margin-bottom: 0.5rem;
+          color: #FF3366;
+          margin: 0 0 0.5rem 0;
         }
 
         .terminal-list {
-          color: var(--text-secondary);
+          color: #A1A1AA;
           padding-left: 1rem;
+          margin: 0;
+          list-style: none;
         }
 
         .terminal-list li {
@@ -198,17 +207,17 @@ const About = () => {
         }
 
         .list-marker {
-          color: var(--accent-primary);
+          color: #00E5FF;
           margin-right: 0.5rem;
         }
 
         .tech-title {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.875rem;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          color: var(--text-secondary);
-          margin-bottom: 2rem;
+          color: #A1A1AA;
+          margin: 0 0 2rem 0;
         }
 
         .tech-grid {
@@ -223,9 +232,9 @@ const About = () => {
         }
 
         .tech-label {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
-          color: var(--accent-primary);
+          color: #00E5FF;
           text-transform: lowercase;
         }
 
@@ -236,18 +245,18 @@ const About = () => {
         }
 
         .tech-item {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.75rem;
           padding: 0.5rem 1rem;
-          background: var(--bg-surface);
-          border: 1px solid var(--border);
-          color: var(--text-primary);
+          background: #18181B;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: #FAFAFA;
           transition: all 0.3s ease;
         }
 
         .tech-item:hover {
-          border-color: var(--accent-primary);
-          color: var(--accent-primary);
+          border-color: #00E5FF;
+          color: #00E5FF;
           box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
         }
       `}</style>
