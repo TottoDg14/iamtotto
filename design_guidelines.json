@@ -1,0 +1,94 @@
+{
+  "theme": "Dark",
+  "archetype": "4 (Swiss & High-Contrast) + Retro-Futurism/Terminal Developer Aesthetic",
+  "typography": {
+    "headings": {
+      "font": "Outfit",
+      "weights": ["400", "700", "900"],
+      "class": "font-sans tracking-tight"
+    },
+    "body": {
+      "font": "IBM Plex Sans",
+      "weights": ["400", "500"],
+      "class": "font-sans leading-relaxed text-zinc-400"
+    },
+    "accents": {
+      "font": "JetBrains Mono",
+      "weights": ["400", "700"],
+      "class": "font-mono tracking-widest uppercase text-xs text-cyan-400"
+    }
+  },
+  "color_palette": {
+    "background": "#09090B",
+    "surface": "#18181B",
+    "surface_glass": "rgba(24, 24, 27, 0.4)",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "border_hover": "rgba(0, 229, 255, 0.5)",
+    "text_primary": "#FAFAFA",
+    "text_secondary": "#A1A1AA",
+    "accent_primary": "#00E5FF",
+    "accent_secondary": "#FF3366",
+    "glow": "drop-shadow-[0_0_8px_rgba(0,229,255,0.5)]"
+  },
+  "layout_spacing": {
+    "grid_strategy": "The 'Control Room' / Technical Grid",
+    "gap": "gap-8",
+    "padding": "p-8 md:p-12",
+    "borders": "Expose the skeleton. Container border-collapse, items border-r border-b border-white/10."
+  },
+  "components_instructions": {
+    "header": "Sticky nav with Crystal Glass: backdrop-blur-xl bg-zinc-950/70 border-b border-white/10.",
+    "hero": "Asymmetric bento layout. Large 'Outfit' text for name, 'JetBrains Mono' for role. Use the generated abstract 3D topology map for the background with a 60% black overlay. Include 'ES/EN' language toggle.",
+    "about_me": "Terminal aesthetic. Use a monospace code block style for showing his tech stack (Java, iDempiere, Node.js, PostgreSQL, Next.js, etc.).",
+    "services": "Grid of services. Icons should be simple, high contrast (Cyan on Dark). Phosphor icons or Lucide.",
+    "projects": "Bento Grid cards. Each card must use the specific image provided, heavily tinted dark. Hover effect: image saturates, borders glow cyan.",
+    "contact": "Large typography social links (GitHub, Twitter, Email). No form. Massive footer 'Let's Talk' text."
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/dca4b186d1274cc9752b540d335b8a0160984981cedaba160d9534d1cfee6d34.png",
+      "description": "Abstract topology map for hero background."
+    },
+    "hero_avatar_alternative": {
+      "url": "https://images.pexels.com/photos/1334093/pexels-photo-1334093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Silhouette of developer working in dim light."
+    },
+    "project_idempiere": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/14806343e08b0bf6221e8ba2ba90e4c7e8b2f2c1e9978a68fb30950c0b9c2b87.png",
+      "description": "iDempiere Plugins - Extensiones de documentos y reportes."
+    },
+    "project_whatsapp": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/c6c64ea39619bf979b4e7e93fb240565ab66c8c5b3c65f9ffdbd68c2d98f4ac9.png",
+      "description": "Automatización SAC - WhatsApp con N8N."
+    },
+    "project_runner": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/8c794cc2967477e4b51a9ab336c5bba29e8ee6679d14a604a2758248d7d7d5ba.png",
+      "description": "Runner Light - App para corredores."
+    },
+    "project_prestashop": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/1c190eb7883903d5e173dcaf06ba1a66086757d095cb121c6fc3c25a609b0a62.png",
+      "description": "Middleware PrestaShop-iDempiere."
+    },
+    "project_directory": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/32ce5752fa4bd389beb02bb436339663960081c25ae530f66d0b68c6b22fa847.png",
+      "description": "Directorio de tiendas web app."
+    }
+  },
+  "animations": {
+    "hover": "ALWAYS explicitly set text color on hover. hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300",
+    "scroll": "Use Framer Motion or React Spring for staggered entrance animations in grids."
+  },
+  "accessibility": {
+    "contrast": "Ensure pure white (#FFFFFF) or off-white (#FAFAFA) on dark zinc backgrounds for normal text. Avoid mid-grays that fail APCA.",
+    "testing": "All interactive elements must have data-testid. E.g., data-testid='contact-github-link', data-testid='lang-toggle-button'"
+  },
+  "general_instructions_to_main_agent": [
+    "The project currently uses Next.js 12 with a pages/ directory (no app router). Either upgrade to App Router (Next 14+) or build within the pages/ directory according to standard practices.",
+    "Do NOT use Inter font. Import Outfit, IBM Plex Sans, and JetBrains Mono.",
+    "Keep styling mostly monochrome with Electric Cyan (#00E5FF) used only for accents and active states.",
+    "Implement translation logically (e.g. standard Next.js i18n or simple React context since it's a basic portfolio).",
+    "There are 5 specific projects to showcase. Use the bento grid or alternating full-width rows with the provided images.",
+    "Do NOT add a contact form. Only mailto: and social links (GitHub, Twitter).",
+    "Avoid typical Vercel/Stripe looking cards. Go for technical brutalism: 1px sharp borders, no soft drop shadows except for the glowing neon hover state."
+  ]
+}
