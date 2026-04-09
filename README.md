@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# David Marquez - Full Stack Developer
 
-## Getting Started
+> Construyo soluciones prácticas que mezclan backend sólido con interfaces claras y útiles.
 
-First, run the development server:
+## 👋 Sobre mí
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Soy desarrollador de software con más de **8 años de experiencia** en diversos lenguajes, frameworks y entornos como: Java, iDempiere, PostgreSQL, JasperSoft, MySQL, PHP, Symfony, Node.js, React, Express, y Prisma. También trabajo con Next.js, Expo y React Native para proyectos web y móviles.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+He trabajado desplegando servicios completos en **Kubernetes**, desarrollando backend para **APIs y paneles administrativos**, y he publicado aplicaciones en **Play Store** y **App Store**.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 💻 Tech Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Backend:** Java, Node.js, Express, PHP, Symfony, iDempiere
 
-## Learn More
+**Frontend:** React, Next.js, React Native, Expo
 
-To learn more about Next.js, take a look at the following resources:
+**Bases de Datos:** PostgreSQL, MySQL, Prisma, JasperSoft
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**DevOps:** Kubernetes, Docker, AWS, Git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Servicios
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Desarrollo Web** - Aplicaciones web modernas con React, Next.js y Node.js
+- **Desarrollo Backend** - APIs robustas con Node.js, Express, Java, PHP/Symfony
+- **Apps Móviles** - Desarrollo multiplataforma con React Native y Expo
+- **Cloud & DevOps** - Despliegue en Kubernetes, Docker y configuración cloud
+- **Bases de Datos** - Diseño con PostgreSQL, MySQL, Prisma y reportes JasperSoft
+- **Integraciones ERP** - Plugins para iDempiere, reportes Jasper y middleware
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## 🚀 Proyectos Destacados
+
+### iDempiere Plugins
+Extensiones para manejo de documentos, seriales y reportes Jasper.
+`Java` `iDempiere` `JasperReports`
+
+### Automatización SAC
+Asistente técnico vía WhatsApp con N8N para gestión de garantías.
+`N8N` `WhatsApp` `Automation`
+
+### Runner Light
+App para corredores con sistema de recompensas y logros. Publicada en stores.
+`React Native` `Expo` `Mobile`
+
+### Middleware E-commerce
+Comunicación entre PrestaShop e iDempiere para sincronización de datos.
+`PHP` `API` `Integration`
+
+### Directorio de Tiendas
+Plataforma web con filtros por ciudad para encontrar tiendas locales.
+`Next.js` `Vercel` `PostgreSQL`
+
+---
+
+## 📫 Contacto
+
+- **Email:** davidmarsant@gmail.com
+- **GitHub:** [@TottoDg14](https://github.com/TottoDg14)
+- **Twitter:** [@TottoDg14](https://twitter.com/TottoDg14)
+- **Web:** [iamtotto.com](https://www.iamtotto.com)
+
+---
+
+*Siempre en busca de nuevos retos para crear proyectos que conecten tecnología + experiencia real.*
