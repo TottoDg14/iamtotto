@@ -1,0 +1,262 @@
+import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
+
+const projectImages = [
+  'https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/14806343e08b0bf6221e8ba2ba90e4c7e8b2f2c1e9978a68fb30950c0b9c2b87.png',
+  'https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/c6c64ea39619bf979b4e7e93fb240565ab66c8c5b3c65f9ffdbd68c2d98f4ac9.png',
+  'https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/8c794cc2967477e4b51a9ab336c5bba29e8ee6679d14a604a2758248d7d7d5ba.png',
+  'https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/1c190eb7883903d5e173dcaf06ba1a66086757d095cb121c6fc3c25a609b0a62.png',
+  'https://static.prod-images.emergentagent.com/jobs/33969333-bfdd-4d94-813c-b468782988ae/images/32ce5752fa4bd389beb02bb436339663960081c25ae530f66d0b68c6b22fa847.png'
+];
+
+const projectLinks = [
+  'https://github.com/TottoDg14',
+  'https://github.com/TottoDg14',
+  'https://github.com/TottoDg14',
+  'https://github.com/TottoDg14/Middleware',
+  'https://github.com/TottoDg14'
+];
+
+// External link icon
+const ExternalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+    <polyline points="15 3 21 3 21 9"/>
+    <line x1="10" x2="21" y1="14" y2="3"/>
+  </svg>
+);
+
+const Projects = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section id="projects" className="projects" data-testid="projects-section">
+      <div className="container">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="section-label">{t.projects.subtitle}</span>
+          <h2 className="section-title">{t.projects.title}</h2>
+        </motion.div>
+
+        <div className="projects-grid">
+          {t.projects.items.map((project, index) => (
+            <motion.a
+              key={index}
+              href={projectLinks[index]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`project-card ${index === 0 ? 'featured' : ''}`}
+              data-testid={`project-card-${index}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="project-image">
+                <img src={projectImages[index]} alt={project.title} />
+                <div className="project-overlay"></div>
+              </div>
+              <div className="project-content">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                  <span className="project-link-icon"><ExternalLinkIcon /></span>
+                </div>
+                <p className="project-description">{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="project-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+
+      <style jsx>{`
+        .projects {
+          padding: 8rem 0;
+          background: var(--bg-primary);
+        }
+
+        .section-header {
+          margin-bottom: 4rem;
+        }
+
+        .section-label {
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          color: var(--accent-primary);
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+          font-family: var(--font-heading);
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        .projects-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+          .projects-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .project-card.featured {
+            grid-column: span 2;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          .project-card.featured {
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+        }
+
+        .project-card {
+          position: relative;
+          border: 1px solid var(--border);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .project-card:hover {
+          border-color: var(--border-hover);
+          box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+        }
+
+        .project-card:hover .project-image img {
+          filter: saturate(1.2);
+          transform: scale(1.05);
+        }
+
+        .project-card:hover .project-overlay {
+          opacity: 0.7;
+        }
+
+        .project-card:hover .project-link-icon {
+          color: var(--accent-primary);
+          transform: translate(3px, -3px);
+        }
+
+        .project-image {
+          position: relative;
+          aspect-ratio: 16/10;
+          overflow: hidden;
+        }
+
+        .project-card.featured .project-image {
+          aspect-ratio: auto;
+          flex: 1;
+          min-height: 300px;
+        }
+
+        .project-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: saturate(0.7);
+          transition: all 0.5s ease;
+        }
+
+        .project-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            var(--bg-primary) 0%,
+            transparent 100%
+          );
+          opacity: 0.9;
+          transition: opacity 0.3s ease;
+        }
+
+        .project-content {
+          padding: 1.5rem;
+          background: var(--bg-surface);
+        }
+
+        .project-card.featured .project-content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            to top,
+            var(--bg-surface) 0%,
+            rgba(24, 24, 27, 0.9) 100%
+          );
+        }
+
+        .project-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 0.75rem;
+        }
+
+        .project-title {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        .project-link-icon {
+          color: var(--text-secondary);
+          transition: all 0.3s ease;
+          flex-shrink: 0;
+          display: flex;
+        }
+
+        .project-description {
+          font-size: 0.875rem;
+          color: var(--text-secondary);
+          margin-bottom: 1rem;
+          line-height: 1.6;
+        }
+
+        .project-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .project-tag {
+          font-family: var(--font-mono);
+          font-size: 0.625rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          padding: 0.375rem 0.75rem;
+          background: var(--bg-primary);
+          border: 1px solid var(--border);
+          color: var(--accent-primary);
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Projects;

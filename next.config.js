@@ -1,14 +1,9 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  plugins: {
-    'fontawesome-svg-core': {
-      'license': 'free'
-    }
+  images: {
+    domains: ['static.prod-images.emergentagent.com', 'images.pexels.com'],
   },
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
+};
 
-    return config;
-  },
-}
+module.exports = nextConfig;

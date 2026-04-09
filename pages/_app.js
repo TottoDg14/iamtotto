@@ -1,16 +1,15 @@
-import Layout from '../comps/Layout'
-import '../styles/bootstrap.css'
-import '../styles/bootstrap-grid.css'
-import '../styles/bootstrap-utilities.css'
-import '../styles/globals.css'
-import '../styles/custom.css'
+import Layout from '../comps/Layout';
+import { LanguageProvider } from '../context/LanguageContext';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+    <LanguageProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </LanguageProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
