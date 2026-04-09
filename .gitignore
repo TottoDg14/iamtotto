@@ -35,3 +35,7 @@ yarn-error.log*
 
 # sass
 /styles/sass
+-e 
+# Environment files
+*.env
+*.env.*
