@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title class="jsx-9e9b84bc73981889">Flexor - Bot de Gestión de Entregas | David Marquez</title><meta name="description" content="Bot de Telegram para empresas de envíos. Automatiza registro de entregas, control de despachos y métricas de carriers." class="jsx-9e9b84bc73981889"/><meta name="next-head-count" content="4"/><link rel="preload" href="/_next/static/css/80a2949de9f4ba15.css" as="style"/><link rel="stylesheet" href="/_next/static/css/80a2949de9f4ba15.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-9b312e20a4e32339.js" defer=""></script><script src="/_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script><script src="/_next/static/chunks/main-101cfeaa18eb0e64.js" defer=""></script><script src="/_next/static/chunks/pages/_app-48a691997c3ceef4.js" defer=""></script><script src="/_next/static/chunks/186-c2056e63b935faec.js" defer=""></script><script src="/_next/static/chunks/pages/flexor-ccfd446c72408968.js" defer=""></script><script src="/_next/static/vSUewoIwbu5-4I9OU5Cny/_buildManifest.js" defer=""></script><script src="/_next/static/vSUewoIwbu5-4I9OU5Cny/_ssgManifest.js" defer=""></script><script src="/_next/static/vSUewoIwbu5-4I9OU5Cny/_middlewareManifest.js" defer=""></script><style id="__jsx-f52ae05e4ece0103">.navbar.jsx-f52ae05e4ece0103{position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+padding:1rem 0;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.navbar.scrolled.jsx-f52ae05e4ece0103{background:rgba(9, 9, 11, 0.85);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255, 255, 255, 0.1)}
+.nav-container.jsx-f52ae05e4ece0103{max-width:1200px;
+margin:0 auto;
+padding:0 1.5rem;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between}
+.logo.jsx-f52ae05e4ece0103{font-family:var(--font-mono);
+font-size:1.5rem;
+font-weight:700;
+color:var(--text-primary);
+-webkit-transition:color 0.3s ease;
+transition:color 0.3s ease}
+.logo.jsx-f52ae05e4ece0103:hover{color:var(--accent-primary)}
+.logo-bracket.jsx-f52ae05e4ece0103{color:var(--accent-primary)}
+.nav-links.jsx-f52ae05e4ece0103{display:none;
+gap:2rem}
+.nav-link.jsx-f52ae05e4ece0103{font-family:var(--font-mono);
+font-size:0.875rem;
+text-transform:uppercase;
+letter-spacing:0.1em;
+color:var(--text-secondary);
+-webkit-transition:color 0.3s ease;
+transition:color 0.3s ease;
+position:relative}
+.nav-link.jsx-f52ae05e4ece0103::after{content:'';
+position:absolute;
+bottom:-4px;
+left:0;
+width:0;
+height:2px;
+background:var(--accent-primary);
+-webkit-transition:width 0.3s ease;
+transition:width 0.3s ease}
+.nav-link.jsx-f52ae05e4ece0103:hover{color:var(--accent-primary)}
+.nav-link.jsx-f52ae05e4ece0103:hover::after{width:100%}
+.nav-actions.jsx-f52ae05e4ece0103{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+gap:1rem}
+.lang-toggle.jsx-f52ae05e4ece0103{font-family:var(--font-mono);
+font-size:0.75rem;
+letter-spacing:0.1em;
+color:var(--text-secondary);
+padding:0.5rem 0.75rem;
+border:1px solid var(--border);
+border-radius:4px;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.lang-toggle.jsx-f52ae05e4ece0103:hover{border-color:var(--accent-primary)}
+.lang-toggle.jsx-f52ae05e4ece0103 .active.jsx-f52ae05e4ece0103{color:var(--accent-primary)}
+.lang-toggle.jsx-f52ae05e4ece0103 .separator.jsx-f52ae05e4ece0103{margin:0 0.25rem}
+.menu-toggle.jsx-f52ae05e4ece0103{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+color:var(--text-primary)}
+@media (min-width:768px) {.nav-links.jsx-f52ae05e4ece0103{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex}
+.menu-toggle.jsx-f52ae05e4ece0103{display:none}
+.nav-links.open.jsx-f52ae05e4ece0103{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex}}
+@media (max-width:767px) {.nav-links.jsx-f52ae05e4ece0103{position:fixed;
+top:70px;
+left:0;
+right:0;
+background:rgba(9, 9, 11, 0.95);
+backdrop-filter:blur(20px);
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+padding:2rem;
+gap:1.5rem;
+border-bottom:1px solid var(--border);
+-webkit-transform:translateY(-100%);
+-moz-transform:translateY(-100%);
+-ms-transform:translateY(-100%);
+transform:translateY(-100%);
+opacity:0;
+visibility:hidden;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.nav-links.open.jsx-f52ae05e4ece0103{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-transform:translateY(0);
+-moz-transform:translateY(0);
+-ms-transform:translateY(0);
+transform:translateY(0);
+opacity:1;
+visibility:visible}
+.nav-link.jsx-f52ae05e4ece0103{font-size:1rem}}</style><style id="__jsx-9e9b84bc73981889">.flexor-page{background:#09090B;
+min-height:100vh}
+.flexor-container{max-width:1200px;
+margin:0 auto;
+padding:0 1.5rem}
+.back-link{display:-webkit-inline-box;
+display:-webkit-inline-flex;
+display:-ms-inline-flexbox;
+display:inline-flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+gap:0.5rem;
+font-family:'JetBrains Mono', monospace;
+font-size:0.875rem;
+color:#A1A1AA;
+margin-bottom:2rem;
+-webkit-transition:color 0.3s ease;
+transition:color 0.3s ease}
+.back-link:hover{color:#00E5FF}
+.flexor-hero{padding:6rem 0 4rem}
+.flexor-hero .flexor-container{display:grid;
+grid-template-columns:1fr;
+gap:3rem}
+@media (min-width:1024px) {.flexor-hero .flexor-container{grid-template-columns:1fr 1fr;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center}
+.back-link{grid-column:span 2}}
+.section-label{font-family:'JetBrains Mono', monospace;
+font-size:0.75rem;
+text-transform:uppercase;
+letter-spacing:0.2em;
+color:#00E5FF;
+display:block;
+margin-bottom:0.5rem}
+.hero-title{font-family:'Outfit', sans-serif;
+font-size:clamp(3rem, 8vw, 5rem);
+font-weight:900;
+color:#FAFAFA;
+margin:0 0 0.5rem 0}
+.hero-tagline{font-family:'Outfit', sans-serif;
+font-size:1.5rem;
+font-weight:600;
+color:#00E5FF;
+margin:0 0 1.5rem 0}
+.hero-description{font-family:'IBM Plex Sans', sans-serif;
+font-size:1.125rem;
+color:#A1A1AA;
+line-height:1.7;
+margin:0 0 2rem 0;
+max-width:500px}
+.hero-tags{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+gap:0.75rem;
+flex-wrap:wrap}
+.hero-tag{font-family:'JetBrains Mono', monospace;
+font-size:0.75rem;
+text-transform:uppercase;
+padding:0.5rem 1rem;
+background:#18181B;
+border:1px solid rgba(255, 255, 255, 0.1);
+color:#00E5FF}
+.phone-mockup{background:#18181B;
+border:1px solid rgba(255, 255, 255, 0.1);
+border-radius:24px;
+overflow:hidden;
+max-width:350px;
+margin:0 auto}
+.phone-header{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+gap:0.75rem;
+padding:1rem;
+background:#0088cc;
+color:white;
+font-family:'IBM Plex Sans', sans-serif;
+font-weight:600}
+.telegram-icon{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex}
+.phone-chat{padding:1rem;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+gap:0.75rem;
+min-height:300px}
+.chat-message{max-width:80%;
+padding:0.75rem 1rem;
+border-radius:12px;
+font-family:'IBM Plex Sans', sans-serif;
+font-size:0.875rem}
+.chat-message p{margin:0}
+.chat-message.bot{background:#262626;
+color:#FAFAFA;
+-webkit-align-self:flex-start;
+-ms-flex-item-align:flex-start;
+align-self:flex-start;
+border-bottom-left-radius:4px}
+.chat-message.user{background:#0088cc;
+color:white;
+-webkit-align-self:flex-end;
+-ms-flex-item-align:flex-end;
+align-self:flex-end;
+border-bottom-right-radius:4px}
+.chat-message.success{background:rgba(40, 200, 64, 0.2);
+border:1px solid #28c840;
+color:#28c840}
+.photo-placeholder{width:100px;
+height:80px;
+background:rgba(255, 255, 255, 0.1);
+border-radius:8px;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+-webkit-justify-content:center;
+justify-content:center;
+color:rgba(255, 255, 255, 0.5)}
+.flexor-features{padding:4rem 0;
+background:#18181B}
+.section-title{font-family:'Outfit', sans-serif;
+font-size:clamp(1.75rem, 4vw, 2.5rem);
+font-weight:700;
+color:#FAFAFA;
+margin:0 0 3rem 0;
+text-align:center}
+.features-grid{display:grid;
+grid-template-columns:repeat(1, 1fr);
+gap:1.5rem}
+@media (min-width:640px) {.features-grid{grid-template-columns:repeat(2, 1fr)}}
+@media (min-width:1024px) {.features-grid{grid-template-columns:repeat(3, 1fr)}}
+.feature-card{padding:2rem;
+background:#09090B;
+border:1px solid rgba(255, 255, 255, 0.1);
+border-radius:8px;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.feature-card:hover{border-color:rgba(0, 229, 255, 0.5);
+-webkit-transform:translateY(-4px);
+-moz-transform:translateY(-4px);
+-ms-transform:translateY(-4px);
+transform:translateY(-4px)}
+.feature-card:hover .feature-icon{color:#00E5FF}
+.feature-icon{color:#A1A1AA;
+margin-bottom:1rem;
+-webkit-transition:color 0.3s ease;
+transition:color 0.3s ease}
+.feature-card h3{font-family:'Outfit', sans-serif;
+font-size:1.125rem;
+font-weight:700;
+color:#FAFAFA;
+margin:0 0 0.75rem 0}
+.feature-card p{font-family:'IBM Plex Sans', sans-serif;
+font-size:0.875rem;
+color:#A1A1AA;
+line-height:1.6;
+margin:0}
+.flexor-how{padding:4rem 0}
+.steps-grid{display:grid;
+grid-template-columns:repeat(1, 1fr);
+gap:1.5rem}
+@media (min-width:640px) {.steps-grid{grid-template-columns:repeat(2, 1fr)}}
+@media (min-width:1024px) {.steps-grid{grid-template-columns:repeat(4, 1fr)}}
+.step-card{padding:1.5rem;
+border-left:2px solid #00E5FF}
+.step-number{font-family:'JetBrains Mono', monospace;
+font-size:2rem;
+font-weight:700;
+color:#00E5FF;
+opacity:0.5;
+display:block;
+margin-bottom:0.5rem}
+.step-card h3{font-family:'Outfit', sans-serif;
+font-size:1rem;
+font-weight:700;
+color:#FAFAFA;
+margin:0 0 0.5rem 0}
+.step-card p{font-family:'IBM Plex Sans', sans-serif;
+font-size:0.875rem;
+color:#A1A1AA;
+line-height:1.6;
+margin:0}
+.flexor-tech{padding:3rem 0;
+background:#18181B}
+.tech-title{font-family:'JetBrains Mono', monospace;
+font-size:0.75rem;
+text-transform:uppercase;
+letter-spacing:0.2em;
+color:#A1A1AA;
+margin:0 0 1.5rem 0;
+text-align:center}
+.tech-items{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-justify-content:center;
+justify-content:center;
+flex-wrap:wrap;
+gap:1rem}
+.tech-item{font-family:'JetBrains Mono', monospace;
+font-size:0.875rem;
+padding:0.75rem 1.5rem;
+background:#09090B;
+border:1px solid rgba(255, 255, 255, 0.1);
+color:#FAFAFA;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.tech-item:hover{border-color:#00E5FF;
+color:#00E5FF}
+.flexor-cta{padding:6rem 0}
+.cta-content{text-align:center;
+max-width:600px;
+margin:0 auto}
+.cta-content h2{font-family:'Outfit', sans-serif;
+font-size:clamp(2rem, 5vw, 3rem);
+font-weight:700;
+color:#FAFAFA;
+margin:0 0 1rem 0}
+.cta-content>p{font-family:'IBM Plex Sans', sans-serif;
+font-size:1.125rem;
+color:#A1A1AA;
+line-height:1.7;
+margin:0 0 2rem 0}
+.cta-button{display:inline-block;
+font-family:'JetBrains Mono', monospace;
+font-size:0.875rem;
+text-transform:uppercase;
+letter-spacing:0.1em;
+padding:1rem 2.5rem;
+background:#00E5FF;
+color:#09090B;
+font-weight:600;
+-webkit-transition:all 0.3s ease;
+transition:all 0.3s ease}
+.cta-button:hover{box-shadow:0 0 30px rgba(0, 229, 255, 0.5);
+-webkit-transform:translateY(-2px);
+-moz-transform:translateY(-2px);
+-ms-transform:translateY(-2px);
+transform:translateY(-2px)}
+.privacy-note{font-family:'IBM Plex Sans', sans-serif;
+font-size:0.875rem;
+color:#A1A1AA;
+margin:2rem 0 0 0}
+.privacy-link{color:#00E5FF;
+text-decoration:underline}
+.privacy-link:hover{-webkit-text-decoration:none;
+text-decoration:none}</style><style id="__jsx-83156f6792dbe164">.footer{padding:3rem 0;
+background:#09090B;
+border-top:1px solid rgba(255, 255, 255, 0.1)}
+.footer-container{max-width:1200px;
+margin:0 auto;
+padding:0 1.5rem}
+.footer-content{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+gap:1rem;
+text-align:center}
+.footer-brand{font-family:'JetBrains Mono', monospace;
+font-size:1.5rem;
+font-weight:700;
+color:#FAFAFA}
+.logo-bracket{color:#00E5FF}
+.footer-text{font-family:'JetBrains Mono', monospace;
+font-size:0.875rem;
+color:#A1A1AA;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+gap:0.5rem;
+margin:0}
+.footer-text .heart-icon{color:#FF3366;
+-webkit-animation:pulse 1.5s ease infinite;
+animation:pulse 1.5s ease infinite}
+@keyframes pulse {0%, 100% {transform:scale(1)}50% {transform:scale(1.2)}}
+.footer-links{display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+gap:1.5rem}
+.footer-link{font-family:'JetBrains Mono', monospace;
+font-size:0.75rem;
+color:#A1A1AA;
+text-transform:uppercase;
+letter-spacing:0.1em;
+-webkit-transition:color 0.3s ease;
+transition:color 0.3s ease}
+.footer-link:hover{color:#00E5FF}
+.footer-rights{font-size:0.75rem;
+color:#A1A1AA;
+opacity:0.6;
+margin:0}</style><style id="__jsx-52c0194da15db7c9">.layout.jsx-52c0194da15db7c9{min-height:100vh;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column}
+main.jsx-52c0194da15db7c9{-webkit-flex:1;
+-ms-flex:1;
+flex:1}</style></head><body><div id="__next" data-reactroot=""><div class="jsx-52c0194da15db7c9 layout"><nav data-testid="navbar" class="jsx-f52ae05e4ece0103 navbar "><div class="jsx-f52ae05e4ece0103 nav-container"><a data-testid="nav-logo" class="jsx-f52ae05e4ece0103 logo" href="/"><span class="jsx-f52ae05e4ece0103 logo-bracket">&lt;</span>DM<span class="jsx-f52ae05e4ece0103 logo-bracket">/&gt;</span></a><div class="jsx-f52ae05e4ece0103 nav-links "><a href="#hero" data-testid="nav-link-hero" class="jsx-f52ae05e4ece0103 nav-link">Inicio</a><a href="#about" data-testid="nav-link-about" class="jsx-f52ae05e4ece0103 nav-link">Sobre mí</a><a href="#services" data-testid="nav-link-services" class="jsx-f52ae05e4ece0103 nav-link">Servicios</a><a href="#projects" data-testid="nav-link-projects" class="jsx-f52ae05e4ece0103 nav-link">Proyectos</a><a href="#contact" data-testid="nav-link-contact" class="jsx-f52ae05e4ece0103 nav-link">Contacto</a></div><div class="jsx-f52ae05e4ece0103 nav-actions"><button data-testid="lang-toggle-button" aria-label="Toggle language" class="jsx-f52ae05e4ece0103 lang-toggle"><span class="jsx-f52ae05e4ece0103 active">ES</span><span class="jsx-f52ae05e4ece0103 separator">/</span><span class="jsx-f52ae05e4ece0103 ">EN</span></button><button data-testid="mobile-menu-toggle" aria-label="Toggle menu" class="jsx-f52ae05e4ece0103 menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></div></nav><main class="jsx-52c0194da15db7c9"><div class="jsx-9e9b84bc73981889 flexor-page"><section class="jsx-9e9b84bc73981889 flexor-hero"><div class="jsx-9e9b84bc73981889 flexor-container"><a data-testid="back-home-link" class="jsx-9e9b84bc73981889 back-link" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="jsx-9e9b84bc73981889"><path d="m12 19-7-7 7-7" class="jsx-9e9b84bc73981889"></path><path d="M19 12H5" class="jsx-9e9b84bc73981889"></path></svg>Volver al inicio</a><div class="hero-content" style="opacity:0;transform:translateY(30px) translateZ(0)"><span class="jsx-9e9b84bc73981889 section-label">// flexor.bot</span><h1 class="jsx-9e9b84bc73981889 hero-title">Flexor</h1><p class="jsx-9e9b84bc73981889 hero-tagline">Gestión inteligente de entregas</p><p class="jsx-9e9b84bc73981889 hero-description">Bot de Telegram para empresas de envíos en Argentina. Automatiza el registro de entregas, controla despachos y genera métricas de desempeño de carriers.</p><div class="jsx-9e9b84bc73981889 hero-tags"><span class="jsx-9e9b84bc73981889 hero-tag">Telegram</span><span class="jsx-9e9b84bc73981889 hero-tag">N8N</span><span class="jsx-9e9b84bc73981889 hero-tag">Argentina</span></div></div><div class="hero-visual" style="opacity:0;transform:translateX(50px) translateZ(0)"><div class="jsx-9e9b84bc73981889 phone-mockup"><div class="jsx-9e9b84bc73981889 phone-header"><span class="jsx-9e9b84bc73981889 telegram-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" class="jsx-9e9b84bc73981889"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" class="jsx-9e9b84bc73981889"></path></svg></span><span class="jsx-9e9b84bc73981889">Flexor Bot</span></div><div class="jsx-9e9b84bc73981889 phone-chat"><div class="jsx-9e9b84bc73981889 chat-message bot"><p class="jsx-9e9b84bc73981889">¡Hola! Soy Flexor. Envía el número de seguimiento para registrar tu entrega.</p></div><div class="jsx-9e9b84bc73981889 chat-message user"><p class="jsx-9e9b84bc73981889">ARG-2024-58742</p></div><div class="jsx-9e9b84bc73981889 chat-message bot"><p class="jsx-9e9b84bc73981889">Perfecto. Ahora envía una foto del paquete entregado.</p></div><div class="jsx-9e9b84bc73981889 chat-message user photo"><div class="jsx-9e9b84bc73981889 photo-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="jsx-9e9b84bc73981889"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" class="jsx-9e9b84bc73981889"></rect><circle cx="9" cy="9" r="2" class="jsx-9e9b84bc73981889"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" class="jsx-9e9b84bc73981889"></path></svg></div></div><div class="jsx-9e9b84bc73981889 chat-message bot success"><p class="jsx-9e9b84bc73981889">✓ Entrega registrada correctamente</p></div></div></div></div></div></section><section class="jsx-9e9b84bc73981889 flexor-features"><div class="jsx-9e9b84bc73981889 flexor-container"><h2 class="section-title" style="opacity:0;transform:translateY(20px) translateZ(0)">Características</h2><div class="jsx-9e9b84bc73981889 features-grid"><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg></div><h3 class="jsx-9e9b84bc73981889">Registro con foto</h3><p class="jsx-9e9b84bc73981889">Los carriers pueden registrar entregas enviando una foto como comprobante junto con los datos del envío.</p></div><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><h3 class="jsx-9e9b84bc73981889">Interfaz conversacional</h3><p class="jsx-9e9b84bc73981889">Interacción simple y directa a través de Telegram. Sin apps adicionales, sin curva de aprendizaje.</p></div><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg></div><h3 class="jsx-9e9b84bc73981889">Métricas de desempeño</h3><p class="jsx-9e9b84bc73981889">Dashboards con estadísticas de entregas, tiempos promedio y rendimiento por carrier.</p></div><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div><h3 class="jsx-9e9b84bc73981889">Conciliación de pagos</h3><p class="jsx-9e9b84bc73981889">Control ordenado de despachos para facilitar la liquidación y pago a los carriers.</p></div><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="jsx-9e9b84bc73981889">Registro en tiempo real</h3><p class="jsx-9e9b84bc73981889">Cada entrega se registra al instante, permitiendo seguimiento en vivo de las operaciones.</p></div><div class="feature-card" style="opacity:0;transform:translateY(30px) translateZ(0)"><div class="jsx-9e9b84bc73981889 feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m9 12 2 2 4-4"></path></svg></div><h3 class="jsx-9e9b84bc73981889">Datos seguros</h3><p class="jsx-9e9b84bc73981889">Procesamiento seguro de la información. No almacenamos datos sensibles innecesarios.</p></div></div></div></section><section class="jsx-9e9b84bc73981889 flexor-how"><div class="jsx-9e9b84bc73981889 flexor-container"><h2 class="section-title" style="opacity:0;transform:translateY(20px) translateZ(0)">Cómo funciona</h2><div class="jsx-9e9b84bc73981889 steps-grid"><div class="step-card" style="opacity:0;transform:translateX(-30px) translateZ(0)"><span class="jsx-9e9b84bc73981889 step-number">01</span><h3 class="jsx-9e9b84bc73981889">Carrier inicia chat</h3><p class="jsx-9e9b84bc73981889">El repartidor abre el bot de Telegram y se identifica con su código de carrier.</p></div><div class="step-card" style="opacity:0;transform:translateX(-30px) translateZ(0)"><span class="jsx-9e9b84bc73981889 step-number">02</span><h3 class="jsx-9e9b84bc73981889">Registra la entrega</h3><p class="jsx-9e9b84bc73981889">Envía los datos del paquete: número de seguimiento, destinatario y observaciones.</p></div><div class="step-card" style="opacity:0;transform:translateX(-30px) translateZ(0)"><span class="jsx-9e9b84bc73981889 step-number">03</span><h3 class="jsx-9e9b84bc73981889">Adjunta comprobante</h3><p class="jsx-9e9b84bc73981889">Toma una foto del paquete entregado o de la firma del receptor como evidencia.</p></div><div class="step-card" style="opacity:0;transform:translateX(-30px) translateZ(0)"><span class="jsx-9e9b84bc73981889 step-number">04</span><h3 class="jsx-9e9b84bc73981889">Confirmación automática</h3><p class="jsx-9e9b84bc73981889">El sistema procesa la información, actualiza el estado y notifica a quien corresponda.</p></div></div></div></section><section class="jsx-9e9b84bc73981889 flexor-tech"><div class="jsx-9e9b84bc73981889 flexor-container"><h3 class="jsx-9e9b84bc73981889 tech-title">Tecnologías</h3><div class="jsx-9e9b84bc73981889 tech-items"><span class="jsx-9e9b84bc73981889 tech-item">Telegram Bot API</span><span class="jsx-9e9b84bc73981889 tech-item">N8N</span><span class="jsx-9e9b84bc73981889 tech-item">PostgreSQL</span><span class="jsx-9e9b84bc73981889 tech-item">Node.js</span><span class="jsx-9e9b84bc73981889 tech-item">Cloud Storage</span></div></div></section><section class="jsx-9e9b84bc73981889 flexor-cta"><div class="jsx-9e9b84bc73981889 flexor-container"><div class="cta-content" style="opacity:0;transform:translateY(30px) translateZ(0)"><h2 class="jsx-9e9b84bc73981889">¿Interesado en Flexor?</h2><p class="jsx-9e9b84bc73981889">Si tu empresa de logística necesita una solución similar, contáctame para discutir tu proyecto.</p><a href="mailto:davidmarsant@gmail.com" class="jsx-9e9b84bc73981889 cta-button">Contactar</a><p class="jsx-9e9b84bc73981889 privacy-note">Este proyecto cumple con nuestra<!-- --> <a class="jsx-9e9b84bc73981889 privacy-link" href="/privacy">Política de Privacidad</a></p></div></div></section></div></main><footer data-testid="footer" class="jsx-83156f6792dbe164 footer"><div class="jsx-83156f6792dbe164 footer-container"><div class="jsx-83156f6792dbe164 footer-content"><div class="jsx-83156f6792dbe164 footer-brand"><span class="jsx-83156f6792dbe164 logo-bracket">&lt;</span>DM<span class="jsx-83156f6792dbe164 logo-bracket">/&gt;</span></div><p class="jsx-83156f6792dbe164 footer-text">Hecho con<!-- --> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg> <!-- -->por Totto</p><div class="jsx-83156f6792dbe164 footer-links"><a data-testid="privacy-link" class="jsx-83156f6792dbe164 footer-link" href="/privacy">Política de Privacidad</a></div><p class="jsx-83156f6792dbe164 footer-rights">© <!-- -->2026<!-- --> David Marquez. <!-- -->Todos los derechos reservados<!-- -->.</p></div></div></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/flexor","query":{},"buildId":"vSUewoIwbu5-4I9OU5Cny","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>

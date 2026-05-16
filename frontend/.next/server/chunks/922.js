@@ -79,6 +79,16 @@ const translations = {
             viewProject: 'Ver proyecto',
             items: [
                 {
+                    title: 'Flexor',
+                    description: 'Bot de Telegram para gesti\xf3n de entregas, control de despachos y m\xe9tricas de carriers.',
+                    tags: [
+                        'Telegram',
+                        'N8N',
+                        'Argentina'
+                    ],
+                    link: '/flexor'
+                },
+                {
                     title: 'iDempiere Plugins',
                     description: 'Extensiones para manejo de documentos, seriales y reportes Jasper.',
                     tags: [
