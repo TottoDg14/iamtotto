@@ -66,7 +66,7 @@ const translations = {
           title: 'Flexor',
           description: 'Bot de Telegram para gestión de entregas, control de despachos y métricas de carriers.',
           tags: ['Telegram', 'N8N', 'Argentina'],
-          link: '/flexor'
+          link: '/projects/flexor'
         },
         {
           title: 'iDempiere Plugins',
