@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 
 const HeartIcon = () => (
@@ -7,12 +8,12 @@ const HeartIcon = () => (
 );
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer" data-testid="footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="footer-content">
           <div className="footer-brand">
             <span className="logo-bracket">&lt;</span>
@@ -23,6 +24,14 @@ const Footer = () => {
           <p className="footer-text">
             {t.footer.made} <HeartIcon /> {t.footer.by}
           </p>
+
+          <div className="footer-links">
+            <Link href="/privacy">
+              <a className="footer-link" data-testid="privacy-link">
+                {lang === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}
+              </a>
+            </Link>
+          </div>
           
           <p className="footer-rights">
             © {currentYear} David Marquez. {t.footer.rights}.
@@ -30,11 +39,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         .footer {
           padding: 3rem 0;
-          background: var(--bg-primary);
-          border-top: 1px solid var(--border);
+          background: #09090B;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
         }
 
         .footer-content {
@@ -46,27 +61,28 @@ const Footer = () => {
         }
 
         .footer-brand {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 1.5rem;
           font-weight: 700;
-          color: var(--text-primary);
+          color: #FAFAFA;
         }
 
         .logo-bracket {
-          color: var(--accent-primary);
+          color: #00E5FF;
         }
 
         .footer-text {
-          font-family: var(--font-mono);
+          font-family: 'JetBrains Mono', monospace;
           font-size: 0.875rem;
-          color: var(--text-secondary);
+          color: #A1A1AA;
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          margin: 0;
         }
 
         .footer-text :global(.heart-icon) {
-          color: var(--accent-secondary);
+          color: #FF3366;
           animation: pulse 1.5s ease infinite;
         }
 
@@ -75,10 +91,29 @@ const Footer = () => {
           50% { transform: scale(1.2); }
         }
 
+        .footer-links {
+          display: flex;
+          gap: 1.5rem;
+        }
+
+        .footer-link {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.75rem;
+          color: #A1A1AA;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+          color: #00E5FF;
+        }
+
         .footer-rights {
           font-size: 0.75rem;
-          color: var(--text-secondary);
+          color: #A1A1AA;
           opacity: 0.6;
+          margin: 0;
         }
       `}</style>
     </footer>

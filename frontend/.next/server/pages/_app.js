@@ -204,6 +204,7 @@ const Navbar = ()=>{
 
 
 
+
 const HeartIcon = ()=>/*#__PURE__*/ jsx_runtime_.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         width: "14",
@@ -221,33 +222,33 @@ const HeartIcon = ()=>/*#__PURE__*/ jsx_runtime_.jsx("svg", {
     })
 ;
 const Footer = ()=>{
-    const { t  } = (0,LanguageContext/* useLanguage */.Z)();
+    const { t , lang  } = (0,LanguageContext/* useLanguage */.Z)();
     const currentYear = new Date().getFullYear();
     return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
         "data-testid": "footer",
-        className: "jsx-66c7c9056a9d8530" + " " + "footer",
+        className: "jsx-83156f6792dbe164" + " " + "footer",
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "jsx-66c7c9056a9d8530" + " " + "container",
+                className: "jsx-83156f6792dbe164" + " " + "footer-container",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "jsx-66c7c9056a9d8530" + " " + "footer-content",
+                    className: "jsx-83156f6792dbe164" + " " + "footer-content",
                     children: [
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                            className: "jsx-66c7c9056a9d8530" + " " + "footer-brand",
+                            className: "jsx-83156f6792dbe164" + " " + "footer-brand",
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                    className: "jsx-66c7c9056a9d8530" + " " + "logo-bracket",
+                                    className: "jsx-83156f6792dbe164" + " " + "logo-bracket",
                                     children: "<"
                                 }),
                                 "DM",
                                 /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                    className: "jsx-66c7c9056a9d8530" + " " + "logo-bracket",
+                                    className: "jsx-83156f6792dbe164" + " " + "logo-bracket",
                                     children: "/>"
                                 })
                             ]
                         }),
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
-                            className: "jsx-66c7c9056a9d8530" + " " + "footer-text",
+                            className: "jsx-83156f6792dbe164" + " " + "footer-text",
                             children: [
                                 t.footer.made,
                                 " ",
@@ -256,8 +257,19 @@ const Footer = ()=>{
                                 t.footer.by
                             ]
                         }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: "jsx-83156f6792dbe164" + " " + "footer-links",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                href: "/privacy",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                    "data-testid": "privacy-link",
+                                    className: "jsx-83156f6792dbe164" + " " + "footer-link",
+                                    children: lang === 'es' ? 'Pol\xedtica de Privacidad' : 'Privacy Policy'
+                                })
+                            })
+                        }),
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
-                            className: "jsx-66c7c9056a9d8530" + " " + "footer-rights",
+                            className: "jsx-83156f6792dbe164" + " " + "footer-rights",
                             children: [
                                 "\xa9 ",
                                 currentYear,
@@ -270,8 +282,8 @@ const Footer = ()=>{
                 })
             }),
             jsx_runtime_.jsx((style_default()), {
-                id: "66c7c9056a9d8530",
-                children: ".footer.jsx-66c7c9056a9d8530{padding:3rem 0;\nbackground:var(--bg-primary);\nborder-top:1px solid var(--border)}\n.footer-content.jsx-66c7c9056a9d8530{display:-webkit-box;\ndisplay:-webkit-flex;\ndisplay:-ms-flexbox;\ndisplay:flex;\n-webkit-flex-direction:column;\n-ms-flex-direction:column;\nflex-direction:column;\n-webkit-align-items:center;\n-webkit-box-align:center;\n-ms-flex-align:center;\nalign-items:center;\ngap:1rem;\ntext-align:center}\n.footer-brand.jsx-66c7c9056a9d8530{font-family:var(--font-mono);\nfont-size:1.5rem;\nfont-weight:700;\ncolor:var(--text-primary)}\n.logo-bracket.jsx-66c7c9056a9d8530{color:var(--accent-primary)}\n.footer-text.jsx-66c7c9056a9d8530{font-family:var(--font-mono);\nfont-size:0.875rem;\ncolor:var(--text-secondary);\ndisplay:-webkit-box;\ndisplay:-webkit-flex;\ndisplay:-ms-flexbox;\ndisplay:flex;\n-webkit-align-items:center;\n-webkit-box-align:center;\n-ms-flex-align:center;\nalign-items:center;\ngap:0.5rem}\n.footer-text.jsx-66c7c9056a9d8530 .heart-icon{color:var(--accent-secondary);\n-webkit-animation:pulse 1.5s ease infinite;\nanimation:pulse 1.5s ease infinite}\n@keyframes pulse {0%, 100% {transform:scale(1)}50% {transform:scale(1.2)}}\n.footer-rights.jsx-66c7c9056a9d8530{font-size:0.75rem;\ncolor:var(--text-secondary);\nopacity:0.6}"
+                id: "83156f6792dbe164",
+                children: ".footer{padding:3rem 0;\nbackground:#09090B;\nborder-top:1px solid rgba(255, 255, 255, 0.1)}\n.footer-container{max-width:1200px;\nmargin:0 auto;\npadding:0 1.5rem}\n.footer-content{display:-webkit-box;\ndisplay:-webkit-flex;\ndisplay:-ms-flexbox;\ndisplay:flex;\n-webkit-flex-direction:column;\n-ms-flex-direction:column;\nflex-direction:column;\n-webkit-align-items:center;\n-webkit-box-align:center;\n-ms-flex-align:center;\nalign-items:center;\ngap:1rem;\ntext-align:center}\n.footer-brand{font-family:'JetBrains Mono', monospace;\nfont-size:1.5rem;\nfont-weight:700;\ncolor:#FAFAFA}\n.logo-bracket{color:#00E5FF}\n.footer-text{font-family:'JetBrains Mono', monospace;\nfont-size:0.875rem;\ncolor:#A1A1AA;\ndisplay:-webkit-box;\ndisplay:-webkit-flex;\ndisplay:-ms-flexbox;\ndisplay:flex;\n-webkit-align-items:center;\n-webkit-box-align:center;\n-ms-flex-align:center;\nalign-items:center;\ngap:0.5rem;\nmargin:0}\n.footer-text .heart-icon{color:#FF3366;\n-webkit-animation:pulse 1.5s ease infinite;\nanimation:pulse 1.5s ease infinite}\n@keyframes pulse {0%, 100% {transform:scale(1)}50% {transform:scale(1.2)}}\n.footer-links{display:-webkit-box;\ndisplay:-webkit-flex;\ndisplay:-ms-flexbox;\ndisplay:flex;\ngap:1.5rem}\n.footer-link{font-family:'JetBrains Mono', monospace;\nfont-size:0.75rem;\ncolor:#A1A1AA;\ntext-transform:uppercase;\nletter-spacing:0.1em;\n-webkit-transition:color 0.3s ease;\ntransition:color 0.3s ease}\n.footer-link:hover{color:#00E5FF}\n.footer-rights{font-size:0.75rem;\ncolor:#A1A1AA;\nopacity:0.6;\nmargin:0}"
             })
         ]
     }));
