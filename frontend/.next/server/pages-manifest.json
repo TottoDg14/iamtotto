@@ -1,6 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/api/hello": "pages/api/hello.js",
+  "/flexor": "pages/flexor.html",
   "/": "pages/index.html",
   "/privacy": "pages/privacy.html",
   "/_error": "pages/_error.js",
