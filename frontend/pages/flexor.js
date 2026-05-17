@@ -84,7 +84,9 @@ const Flexor = () => {
       },
       privacy: {
         text: 'Este proyecto cumple con nuestra',
-        link: 'Política de Privacidad'
+        link: 'Política de Privacidad',
+        and: 'y',
+        termsLink: 'Condiciones del Servicio'
       }
     },
     en: {
@@ -164,7 +166,9 @@ const Flexor = () => {
       },
       privacy: {
         text: 'This project complies with our',
-        link: 'Privacy Policy'
+        link: 'Privacy Policy',
+        and: 'and',
+        termsLink: 'Terms of Service'
       }
     }
   };
@@ -378,6 +382,10 @@ const Flexor = () => {
                 {t.privacy.text}{' '}
                 <Link href="/privacy">
                   <a className="privacy-link">{t.privacy.link}</a>
+                </Link>
+                {' '}{t.privacy.and}{' '}
+                <Link href="/terms">
+                  <a className="privacy-link">{t.privacy.termsLink}</a>
                 </Link>
               </p>
             </motion.div>
