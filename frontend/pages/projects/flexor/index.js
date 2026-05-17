@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -373,7 +373,7 @@ const Flexor = () => {
               <p>{t.cta.description}</p>
               <p className="privacy-note">
                 {t.privacy.text}{' '}
-                <Link href="/privacy">
+                <Link href="/projects/flexor/privacy">
                   <a className="privacy-link">{t.privacy.link}</a>
                 </Link>
               </p>
