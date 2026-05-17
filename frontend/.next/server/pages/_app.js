@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 565:
+/***/ 5565:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -19,14 +19,14 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: external "styled-jsx/style"
-var style_ = __webpack_require__(816);
+var style_ = __webpack_require__(9816);
 var style_default = /*#__PURE__*/__webpack_require__.n(style_);
 // EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__(664);
+var next_link = __webpack_require__(1664);
 // EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(689);
+var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./context/LanguageContext.js
-var LanguageContext = __webpack_require__(922);
+var LanguageContext = __webpack_require__(2922);
 ;// CONCATENATED MODULE: ./comps/Navbar.js
 
 
@@ -257,16 +257,26 @@ const Footer = ()=>{
                                 t.footer.by
                             ]
                         }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                             className: "jsx-83156f6792dbe164" + " " + "footer-links",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
-                                href: "/privacy",
-                                children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                    "data-testid": "privacy-link",
-                                    className: "jsx-83156f6792dbe164" + " " + "footer-link",
-                                    children: lang === 'es' ? 'Pol\xedtica de Privacidad' : 'Privacy Policy'
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                    href: "/privacy",
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                        "data-testid": "privacy-link",
+                                        className: "jsx-83156f6792dbe164" + " " + "footer-link",
+                                        children: lang === 'es' ? 'Pol\xedtica de Privacidad' : 'Privacy Policy'
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                    href: "/terms",
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                        "data-testid": "terms-link",
+                                        className: "jsx-83156f6792dbe164" + " " + "footer-link",
+                                        children: lang === 'es' ? 'Condiciones del Servicio' : 'Terms of Service'
+                                    })
                                 })
-                            })
+                            ]
                         }),
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
                             className: "jsx-83156f6792dbe164" + " " + "footer-rights",
@@ -340,56 +350,56 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 14:
+/***/ 4014:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ 524:
+/***/ 8524:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/is-plain-object.js");
 
 /***/ }),
 
-/***/ 20:
+/***/ 8020:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
-/***/ 964:
+/***/ 4964:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
-/***/ 211:
+/***/ 9565:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
 
-/***/ 365:
+/***/ 4365:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/get-middleware-regex.js");
 
 /***/ }),
 
-/***/ 428:
+/***/ 1428:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
-/***/ 292:
+/***/ 1292:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
@@ -403,35 +413,35 @@ module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
 
-/***/ 52:
+/***/ 6052:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
 
 /***/ }),
 
-/***/ 226:
+/***/ 4226:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
-/***/ 422:
+/***/ 5052:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ 232:
+/***/ 9232:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 689:
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
@@ -445,7 +455,7 @@ module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ 816:
+/***/ 9816:
 /***/ ((module) => {
 
 module.exports = require("styled-jsx/style");
@@ -459,7 +469,7 @@ module.exports = require("styled-jsx/style");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,664,922], () => (__webpack_exec__(565)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,664,922], () => (__webpack_exec__(5565)));
 module.exports = __webpack_exports__;
 
 })();
