@@ -381,7 +381,7 @@ const Flexor = () => {
                   <a className="privacy-link">{t.privacy.link}</a>
                 </Link>
                 {' '}{t.privacy.and}{' '}
-                <Link href="/terms">
+                <Link href="/projects/flexor/terms">
                   <a className="privacy-link">{t.privacy.termsLink}</a>
                 </Link>
               </p>
