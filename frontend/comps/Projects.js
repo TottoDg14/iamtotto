@@ -66,7 +66,7 @@ const Projects = () => {
 
     if (isInternal) {
       return (
-        <Link href={href} key={index}>
+        <Link href={project.link} key={index}>
           <motion.a
             className={`project-card ${index === 0 ? 'featured' : ''}`}
             data-testid={`project-card-${index}`}
