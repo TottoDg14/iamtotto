@@ -24,19 +24,6 @@ const Footer = () => {
           <p className="footer-text">
             {t.footer.made} <HeartIcon /> {t.footer.by}
           </p>
-
-          <div className="footer-links">
-            <Link href="/privacy">
-              <a className="footer-link" data-testid="privacy-link">
-                {lang === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}
-              </a>
-            </Link>
-            <Link href="/terms">
-              <a className="footer-link" data-testid="terms-link">
-                {lang === 'es' ? 'Condiciones del Servicio' : 'Terms of Service'}
-              </a>
-            </Link>
-          </div>
           
           <p className="footer-rights">
             © {currentYear} David Marquez. {t.footer.rights}.
