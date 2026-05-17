@@ -254,7 +254,7 @@ const Terms = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>{lang === 'es' ? 'Ver también:' : 'See also:'}</p>
-            <Link href="/privacy">
+            <Link href="/projects/flexor/privacy">
               <a className="related-link">
                 {lang === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}
               </a>
